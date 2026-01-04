@@ -1,0 +1,241 @@
+html,
+body,
+a,
+span,
+div[style*="margin: 16px 0"] {
+border: 0 !important;
+margin: 0 !important;
+outline: 0 !important;
+padding: 0 !important;
+text-decoration: none !important;
+}
+a,
+span,
+td,
+th {
+-webkit-font-smoothing: antialiased !important;
+-moz-osx-font-smoothing: grayscale !important;
+}
+span.st-Delink a {
+color: #525f7f !important;
+text-decoration: none !important;
+}
+/** Modifier: preheader */
+span.st-Delink.st-Delink--preheader a {
+color: white !important;
+text-decoration: none !important;
+}
+/** */
+/** Modifier: title */
+span.st-Delink.st-Delink--title a {
+color: #32325d !important;
+text-decoration: none !important;
+}
+/** */
+/** Modifier: footer */
+span.st-Delink.st-Delink--footer a {
+color: #8898aa !important;
+text-decoration: none !important;
+}
+
+table.st-Header td.st-Header-background div.st-Header-area {
+height: 76px !important;
+width: 600px !important;
+background-repeat: no-repeat !important;
+background-size: 600px 76px !important;
+}
+table.st-Header td.st-Header-logo div.st-Header-area {
+height: 21px !important;
+width: 49px !important;
+background-repeat: no-repeat !important;
+background-size: 49px 21px !important;
+}
+table.st-Header td.st-Header-logo.st-Header-logo--atlasAzlo div.st-Header-area {
+height: 21px !important;
+width: 216px !important;
+background-repeat: no-repeat !important;
+background-size: 216px 21px !important;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi),
+all and (max-width: 768px) {
+/** Modifier: mobile */
+body[override] div.st-Target.st-Target--mobile img {
+  display: none !important;
+  margin: 0 !important;
+  max-height: 0 !important;
+  min-height: 0 !important;
+  mso-hide: all !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+body[override] table.st-Header td.st-Header-background div.st-Header-area {
+  background-image: url('https://stripe-images.s3.amazonaws.com/html_emails/2017-08-21/header/Header-background.png') !important;
+}
+/** Modifier: white */
+body[override] table.st-Header.st-Header--white td.st-Header-background div.st-Header-area {
+  background-image: url('https://stripe-images.s3.amazonaws.com/html_emails/2017-08-21/header/Header-background--white.png') !important;
+}
+/** */
+/** Modifier: simplified */
+body[override] table.st-Header.st-Header--simplified td.st-Header-logo div.st-Header-area {
+  background-image: url('https://stripe-images.s3.amazonaws.com/html_emails/2017-08-21/header/Header-logo.png') !important;
+}
+/** */
+/** Modifier: simplified + atlasAzlo */
+body[override] table.st-Header.st-Header--simplified td.st-Header-logo.st-Header-logo--atlasAzlo div.st-Header-area {
+  background-image: url('https://stripe-images.s3.amazonaws.com/html_emails/2018-05-02/header/Header-logo--atlasAzlo.png') !important;
+}
+/** */
+}
+@media all and (max-width: 600px) {
+/**
+* # Wrapper
+**/
+body[override] table.st-Wrapper,
+body[override] table.st-Width.st-Width--mobile {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+/**
+* # Spacer
+**/
+/** Modifier: gutter */
+body[override] td.st-Spacer.st-Spacer--gutter {
+  width: 32px !important;
+}
+/** */
+/** Modifier: kill */
+body[override] td.st-Spacer.st-Spacer--kill {
+  width: 0 !important;
+}
+/** */
+/** Modifier: emailEnd */
+body[override] td.st-Spacer.st-Spacer--emailEnd {
+  height: 32px !important;
+}
+/** */
+/**
+* # Font
+**/
+/** Modifier: title */
+body[override] td.st-Font.st-Font--title,
+body[override] td.st-Font.st-Font--title span,
+body[override] td.st-Font.st-Font--title a {
+  font-size: 28px !important;
+  line-height: 36px !important;
+}
+/** */
+/** Modifier: header */
+body[override] td.st-Font.st-Font--header,
+body[override] td.st-Font.st-Font--header span,
+body[override] td.st-Font.st-Font--header a {
+  font-size: 24px !important;
+  line-height: 32px !important;
+}
+/** */
+/** Modifier: body */
+body[override] td.st-Font.st-Font--body,
+body[override] td.st-Font.st-Font--body span,
+body[override] td.st-Font.st-Font--body a {
+  font-size: 18px !important;
+  line-height: 28px !important;
+}
+/** */
+/** Modifier: caption */
+body[override] td.st-Font.st-Font--caption,
+body[override] td.st-Font.st-Font--caption span,
+body[override] td.st-Font.st-Font--caption a {
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+/** */
+/**
+* # Header
+**/
+body[override] table.st-Header td.st-Header-background div.st-Header-area {
+  margin: 0 auto !important;
+  width: auto !important;
+  background-position: 0 0 !important;
+}
+body[override] table.st-Header td.st-Header-background div.st-Header-area {
+  background-image: url('https://stripe-images.s3.amazonaws.com/html_emails/2017-08-21/header/Header-background--mobile.png') !important;
+}
+/** Modifier: white */
+body[override] table.st-Header.st-Header--white td.st-Header-background div.st-Header-area {
+  background-image: url('https://stripe-images.s3.amazonaws.com/html_emails/2017-08-21/header/Header-background--white--mobile.png') !important;
+}
+/** */
+/** Modifier: simplified */
+body[override] table.st-Header.st-Header--simplified td.st-Header-logo {
+  width: auto !important;
+}
+body[override] table.st-Header.st-Header--simplified td.st-Header-spacing {
+  width: 0 !important;
+}
+body[override] table.st-Header.st-Header--simplified td.st-Header-logo div.st-Header-area {
+  margin: 0 auto !important;
+  background-image: url('https://stripe-images.s3.amazonaws.com/html_emails/2017-08-21/header/Header-logo.png') !important;
+}
+body[override] table.st-Header.st-Header--simplified td.st-Header-logo.st-Header-logo--atlasAzlo div.st-Header-area {
+  margin: 0 auto !important;
+  background-image: url('https://stripe-images.s3.amazonaws.com/html_emails/2018-05-02/header/Header-logo--atlasAzlo.png') !important;
+}
+/** */
+/**
+* # Divider
+**/
+body[override] table.st-Divider td.st-Spacer.st-Spacer--gutter,
+body[override] tr.st-Divider td.st-Spacer.st-Spacer--gutter {
+  background-color: #e6ebf1;
+}
+/**
+* # Blocks
+**/
+body[override] table.st-Blocks table.st-Blocks-inner {
+  border-radius: 0 !important;
+}
+body[override] table.st-Blocks table.st-Blocks-inner table.st-Blocks-item td.st-Blocks-item-cell {
+  display: block !important;
+}
+/**
+* # Button
+**/
+body[override] table.st-Button {
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+body[override] table.st-Button td.st-Button-area,
+body[override] table.st-Button td.st-Button-area a.st-Button-link,
+body[override] table.st-Button td.st-Button-area span.st-Button-internal {
+  height: 44px !important;
+  line-height: 44px !important;
+  font-size: 18px !important;
+  vertical-align: middle !important;
+}
+}
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi),
+all and (max-width: 768px) {
+/**
+* # mobile image
+**/
+body[override] div.st-Target.st-Target--mobile img {
+  display: none !important;
+  margin: 0 !important;
+  max-height: 0 !important;
+  min-height: 0 !important;
+  mso-hide: all !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+/**
+* # document-list-item image
+**/
+body[override] div.st-Icon.st-Icon--document {
+  background-image: url('https://stripe-images.s3.amazonaws.com/notifications/icons/document--16--regular.png') !important;
+}
+}

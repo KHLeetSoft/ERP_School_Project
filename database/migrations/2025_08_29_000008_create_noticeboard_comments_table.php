@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('noticeboard_comments', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('noticeboard_id')->constrained()->onDelete('cascade');
+            $table->text('content');
+            $table->foreignId('parent_id')->nullable()->constrained('noticeboard_comments')->onDelete('cascade');
+            $table->boolean('is_approved')->default(false);
+            $table->timestamps();
+            
+            // Indexes
+            $table->index(['noticeboard_id', 'is_approved']);
+            $table->index(['parent_id']);
+            $table->index(['user_id', 'created_at']);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('noticeboard_comments');
+    }
+};

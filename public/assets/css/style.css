@@ -1,0 +1,120 @@
+/*================================================================================
+	Item Name: Frest HTML Admin Template
+	Version: 1.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+
+/*.header-navbar.fixed-top {
+    left: 260px;
+    position: fixed;
+    background-color: #c1deff;
+}*/
+
+.header-navbar.fixed-top {
+    position: absolute;
+    background-color: #fff;
+}
+
+.custom-padding {
+    padding: 1.5rem !important;
+}
+
+@media (max-width: 767px) {
+    html .navbar-sticky .app-content .content-wrapper {
+        padding: 1.8rem 1rem 0;
+        margin-top: 2rem;
+    }
+
+    .custom-padding {
+        padding: 0 !important;
+    }
+}
+
+table td {
+    padding: .6rem 2rem !important;
+    vertical-align: top;
+    border-top: 1px solid #dfe3e7;
+}
+
+table th:last-child, table td:last-child {
+    text-align: right;
+}
+
+.btn.btn-sm {
+	padding: .2rem .8rem !important;
+}
+
+.main-menu .navbar-header .navbar-brand .brand-text{
+    font-size: 1.3rem !important;
+}
+
+
+#property-list-table tr th {
+    padding: 10px 12px !important; 
+}
+#property-list-table tr td {
+    font-size: 14px;
+    padding: 10px !important; 
+}
+#property-list-table tr td:first-child {
+    width: 3%;
+}
+#property-list-table tr td:nth-child(2) {
+    width: 17%;
+}
+#property-list-table tr td:nth-child(3) {
+    width: 10%;
+}
+#property-list-table tr td:nth-child(4) {
+    width: 10%;
+}
+#property-list-table tr td:nth-child(5) {
+    width: 15%;
+}
+#property-list-table tr td:nth-child(6) {
+    width: 15%;
+}
+#property-list-table tr td:nth-child(7) {
+    width: 10%;
+}
+#property-list-table tr td:last-child {
+    width: 20%;
+}
+
+
+
+#employee-list-table tr th {
+    padding: 10px 12px !important; 
+}
+#employee-list-table tr td {
+    font-size: 14px;
+    padding: 10px 5px !important; 
+}
+#employee-list-table tr td:first-child {
+    width: 3%;
+}
+#employee-list-table tr td:nth-child(2) {
+    width: 10%;
+}
+#employee-list-table tr td:nth-child(3) {
+    width: 10%;
+}
+#employee-list-table tr td:nth-child(4) {
+    width: 12%;
+}
+#employee-list-table tr td:nth-child(5) {
+    width: 10%;
+}
+#employee-list-table tr td:nth-child(6) {
+    width: 10%;
+}
+#employee-list-table tr td:last-child {
+    width: 45%;
+}
