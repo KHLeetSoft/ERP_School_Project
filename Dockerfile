@@ -1,31 +1,37 @@
-# Use official PHP image
 FROM php:8.2-apache
 
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy project
-COPY . /var/www/html
+# Enable Apache rewrite
+RUN a2enmod rewrite
 
-# Install dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    libzip-dev unzip git \
+    git unzip libzip-dev \
     && docker-php-ext-install pdo_mysql zip
 
-# Enable Apache mod_rewrite
-RUN a2enmod rewrite
+# Set Apache DocumentRoot to Laravel public folder
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+
+RUN sed -ri 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
+    && sed -ri 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
+
+# Copy project files
+COPY . /var/www/html
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Install PHP dependencies
+# Install Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Generate Laravel key
+# Set permissions
+RUN chown -R www-data:www-data storage bootstrap/cache
+
+# Generate app key
 RUN php artisan key:generate
 
-# Expose port
 EXPOSE 8080
 
-# Start Apache
 CMD ["apache2-foreground"]
